@@ -12,11 +12,10 @@ with open('LICENSE') as f:
 setup(
     name='barbeque',
     version='0.1.0',
-    description='Incremental processing framework on BigQuery'
+    description='Incremental processing framework on BigQuery',
     long_description=readme,
     author='Rendy B. Junior',
-    author_email='rendy.b.junior@gmail.com'
-    url='https://github.com/rendybjunior/barbeque'
-    license=license,
+    author_email='rendy.b.junior@gmail.com',
+    url='https://github.com/rendybjunior/barbeque',
     packages=find_packages(exclude=('tests', 'docs'))
 )

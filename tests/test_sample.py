@@ -7,4 +7,4 @@ import pytest
 from barbeque.sample import inc
 
 def test_main():
-    assert inc(3) == 5
+    assert inc(3) == 4

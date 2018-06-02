@@ -2,4 +2,4 @@ id,brand_id,amount,timestamp
 1,super_bbq,123,2018-06-17 08:00:00
 2,super_bbq,456,2018-06-17 14:00:00
 3,super_bbq,142,2018-06-18 13:00:00
-4,just_ok_bbq,542,2017-06-20 09:00:00
+4,just_ok_bbq,542,2018-06-20 09:00:00
