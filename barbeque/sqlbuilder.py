@@ -38,7 +38,8 @@ class SQLBuilder(object):
         aggr = job_runtime.job_config.aggr
         partition_field = job_runtime.job_config.partition_field
         str_list.append("SELECT ")
-        str_list.append("DATE({}) AS day, ".format(partition_field)) # TODO separate as a function
+        str_list.append("TIMESTAMP(DATE({})) AS {}_day, "\
+                .format(partition_field, partition_field)) # TODO separate as a function
         str_list.append(", ".join(keys))
         str_list.append(", ")
         str_list.append(", ".join([SQLBuilder.build_aggr(x.get("field"), x.get("func")) for x in aggr]))

@@ -64,6 +64,8 @@ def test_sqlbuilder():
     job_param = JobParam(start_dt, end_dt)
     job_runtime = JobRuntime(job_config, job_param)
     sql = SQLBuilder.build(job_runtime)
-    assert sql == ('SELECT DATE(timestamp) AS day, brand_id, SUM(amount) AS amount_sum, COUNT(*) AS cnt '
+    assert sql == ('SELECT TIMESTAMP(DATE(timestamp)) AS timestamp_day, brand_id, '
+            'SUM(amount) AS amount_sum, COUNT(*) AS cnt '
             'FROM `barbeque.sales` WHERE timestamp >= "2018-06-17" AND timestamp < "2018-06-21" '
             'GROUP BY 1, 2')
+
